@@ -14,6 +14,7 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.aquleo.in'),
   title: 'Aquleo Technologies — Built in India. Built for the World.',
   description:
     'Software products and IT services from Andhra Pradesh, India. We build mobile apps, web platforms, and custom software.',

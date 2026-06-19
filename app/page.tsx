@@ -65,7 +65,7 @@ export default function HomePage() {
                 Explore products
               </Link>
               <Link
-                href="/contact"
+                href="/services"
                 className="font-montserrat font-bold border border-navy-light text-navy-lightest px-6 py-2.5 rounded-md text-sm transition-colors hover:bg-navy-light hover:text-white"
               >
                 Work with us

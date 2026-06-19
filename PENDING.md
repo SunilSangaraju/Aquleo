@@ -2,18 +2,19 @@
 
 ## Must-do before going live
 
-- [ ] **Deploy to Vercel** — import the GitHub repo at vercel.com, zero config needed for Next.js
+- [x] **Deploy to Vercel** — done
 - [ ] **Domain setup** — connect `aquleo.in` to Vercel (or buy the domain if not yet purchased)
-- [ ] **Contact form backend** — share email service credentials (Resend / Formspree) to wire up form submission
-- [ ] **WhatsApp number** — replace `+91 XXXXXXXXXX` in the Contact page with the real number
+- [x] **Contact form backend** — API route created (`app/api/contact/route.ts`), add `RESEND_API_KEY` to Vercel environment variables
+- [ ] **WhatsApp number** — replace `XXXXXXXXXX` in `app/contact/page.tsx` and `wa.me` link with real number
 - [ ] **Set up email addresses** — `hello@aquleo.in` and `business@aquleo.in` need to be created (Google Workspace, Zoho Mail, or Cloudflare Email Routing)
+- [ ] **Add RESEND_API_KEY to Vercel** — Settings → Environment Variables in your Vercel project dashboard
 
 ---
 
 ## Missing pages
 
-- [ ] **Privacy Policy page** (`/privacy`) — footer links to it but page doesn't exist yet
-- [ ] **Terms page** (`/terms`) — same issue
+- [x] **Privacy Policy page** (`/privacy`) — created
+- [x] **Terms page** (`/terms`) — created
 
 ---
 

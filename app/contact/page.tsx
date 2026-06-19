@@ -4,30 +4,60 @@ import { useState } from 'react'
 import { Mail, MapPin, Clock, MessageSquare } from 'lucide-react'
 import Logo from '@/components/Logo'
 
+type Status = 'idle' | 'loading' | 'success' | 'error'
+
+const EMPTY_FORM = { name: '', email: '', company: '', subject: '', message: '' }
+
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    subject: '',
-    message: '',
-  })
+  const [formData, setFormData] = useState(EMPTY_FORM)
+  const [status, setStatus] = useState<Status>('idle')
+  const [validationError, setValidationError] = useState('')
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
+    if (validationError) setValidationError('')
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const validate = () => {
+    if (!formData.name.trim()) return 'Please enter your full name.'
+    if (!formData.email.trim()) return 'Please enter your email address.'
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(formData.email)) return 'Please enter a valid email address.'
+    if (!formData.subject) return 'Please select a subject.'
+    if (!formData.message.trim()) return 'Please enter a message.'
+    return ''
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Backend integration to be added
-    alert('Thank you! We will get back to you within 48 hours.')
+    const error = validate()
+    if (error) { setValidationError(error); return }
+
+    setStatus('loading')
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      if (res.ok) {
+        setStatus('success')
+        setFormData(EMPTY_FORM)
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   const inputClass =
-    'w-full font-montserrat text-sm text-navy-dark bg-white border border-gray-200 rounded-md px-4 py-2.5 outline-none focus:border-navy-light transition-colors placeholder:text-gray-muted'
+    'w-full font-montserrat text-sm text-navy-dark bg-white border border-gray-200 rounded-md px-4 py-2.5 outline-none focus:border-navy-light transition-colors placeholder:text-gray-muted disabled:opacity-50'
   const labelClass = 'font-montserrat font-medium text-xs text-navy-dark mb-1.5 block'
+  const isLoading = status === 'loading'
+  const isDone = status === 'success'
 
   return (
     <>
@@ -54,17 +84,47 @@ export default function ContactPage() {
             <h2 className="font-montserrat font-bold text-xl text-navy-dark mb-6">
               Send us a message
             </h2>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+
+            {/* Success state */}
+            {status === 'success' && (
+              <div className="mb-5 rounded-md px-4 py-3 bg-[#E1F5EE] border border-[#5DCAA5]">
+                <p className="font-montserrat font-medium text-sm text-[#085041]">
+                  Message sent! We will reply within 48 hours.
+                </p>
+              </div>
+            )}
+
+            {/* Error state */}
+            {status === 'error' && (
+              <div className="mb-5 rounded-md px-4 py-3 bg-red-50 border border-red-200">
+                <p className="font-montserrat font-medium text-sm text-red-700">
+                  Failed to send. Please email{' '}
+                  <a href="mailto:hello@aquleo.in" className="underline">
+                    hello@aquleo.in
+                  </a>{' '}
+                  directly.
+                </p>
+              </div>
+            )}
+
+            {/* Validation error */}
+            {validationError && (
+              <div className="mb-5 rounded-md px-4 py-3 bg-red-50 border border-red-200">
+                <p className="font-montserrat font-medium text-sm text-red-700">{validationError}</p>
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4" noValidate>
               <div>
                 <label htmlFor="name" className={labelClass}>Full name</label>
                 <input
                   id="name"
                   name="name"
                   type="text"
-                  required
                   placeholder="Your full name"
                   value={formData.name}
                   onChange={handleChange}
+                  disabled={isLoading || isDone}
                   className={inputClass}
                 />
               </div>
@@ -75,10 +135,10 @@ export default function ContactPage() {
                   id="email"
                   name="email"
                   type="email"
-                  required
                   placeholder="you@example.com"
                   value={formData.email}
                   onChange={handleChange}
+                  disabled={isLoading || isDone}
                   className={inputClass}
                 />
               </div>
@@ -94,6 +154,7 @@ export default function ContactPage() {
                   placeholder="Your company name"
                   value={formData.company}
                   onChange={handleChange}
+                  disabled={isLoading || isDone}
                   className={inputClass}
                 />
               </div>
@@ -103,9 +164,9 @@ export default function ContactPage() {
                 <select
                   id="subject"
                   name="subject"
-                  required
                   value={formData.subject}
                   onChange={handleChange}
+                  disabled={isLoading || isDone}
                   className={inputClass}
                 >
                   <option value="" disabled>Select a subject</option>
@@ -121,20 +182,21 @@ export default function ContactPage() {
                 <textarea
                   id="message"
                   name="message"
-                  required
                   rows={5}
                   placeholder="Tell us about your project or question..."
                   value={formData.message}
                   onChange={handleChange}
+                  disabled={isLoading || isDone}
                   className={`${inputClass} resize-none`}
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full font-montserrat font-bold bg-gold-bright text-gold-dark py-3 rounded-md text-sm transition-opacity hover:opacity-90 mt-1"
+                disabled={isLoading || isDone}
+                className="w-full font-montserrat font-bold bg-gold-bright text-gold-dark py-3 rounded-md text-sm transition-opacity hover:opacity-90 mt-1 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Send message
+                {isLoading ? 'Sending...' : isDone ? 'Message sent ✅' : 'Send message'}
               </button>
             </form>
           </div>
@@ -174,7 +236,15 @@ export default function ContactPage() {
                 <MessageSquare size={18} className="text-navy mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="font-montserrat font-medium text-xs text-gray-muted mb-1">WhatsApp</p>
-                  <span className="font-montserrat text-navy-dark text-sm">+91 XXXXXXXXXX</span>
+                  {/* TODO: Replace XXXXXXXXXX with real WhatsApp number */}
+                  <a
+                    href="https://wa.me/91XXXXXXXXXX"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-montserrat text-navy-dark text-sm hover:text-navy transition-colors"
+                  >
+                    +91 XXXXXXXXXX
+                  </a>
                 </div>
               </div>
 

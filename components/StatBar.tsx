@@ -10,7 +10,7 @@ const stats = [
     highlight: true,
   },
   {
-    value: '2025',
+    value: '2026',
     label: 'Year founded',
     highlight: true,
   },

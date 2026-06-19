@@ -1,4 +1,4 @@
-type LogoSize = 'sm' | 'md' | 'lg'
+type LogoSize = 'sm' | 'md' | 'lg' | 'xl'
 type LogoVariant = 'default' | 'white'
 
 interface LogoProps {
@@ -31,6 +31,14 @@ const configs = {
     bolt: '34,22 26,36 32,36 28,50 38,36 33,36',
     wordSize: 'text-xl',
     subSize: 'text-[11px]',
+  },
+  xl: {
+    px: 96,
+    hexPoints: '48,6 84,27 84,69 48,90 12,69 12,27',
+    droplet: 'M48,22.5 C60,34.5 67.5,48 67.5,63 A19.5,19.5 0 1,1 28.5,63 C28.5,48 36,34.5 48,22.5 Z',
+    bolt: '51,33 39,54 48,54 42,75 57,54 50,54',
+    wordSize: 'text-2xl',
+    subSize: 'text-[13px]',
   },
 }
 

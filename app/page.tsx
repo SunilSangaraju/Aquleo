@@ -28,8 +28,8 @@ export default function HomePage() {
       <section className="bg-navy-dark py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
           {/* Logo feature block */}
-          <div className="flex flex-col items-center md:items-start gap-3 md:w-64 flex-shrink-0">
-            <Logo size="lg" variant="white" showWordmark={false} />
+          <div className="flex flex-col items-center md:items-start gap-4 md:w-80 flex-shrink-0">
+            <Logo size="xl" variant="white" showWordmark={false} />
             <p className="font-montserrat font-bold text-2xl text-white tracking-wide text-center md:text-left">
               AQULEO TECHNOLOGIES
             </p>

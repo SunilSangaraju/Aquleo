@@ -4,7 +4,8 @@ import SectionLabel from '@/components/SectionLabel'
 
 export const metadata: Metadata = {
   title: 'About — Aquleo Technologies',
-  description: 'Aquleo Technologies is a software company from Andhra Pradesh, India. Founded 2025.',
+  description:
+    'Aquleo Technologies is a software company based in Andhra Pradesh, India. Built in India. Built for the World.',
 }
 
 const Tag = ({ children }: { children: string }) => (
@@ -81,9 +82,12 @@ export default function AboutPage() {
                 internationally, and work with clients remotely across time zones.
               </p>
               <div className="flex flex-wrap gap-1.5">
-                {['Founded 2025', 'Andhra Pradesh', 'GST registered', 'MSME certified'].map((t) => (
-                  <Tag key={t}>{t}</Tag>
-                ))}
+                <Tag>Founded 2025</Tag>
+                <Tag>Andhra Pradesh</Tag>
+                {/* TODO: Add GST number once registered */}
+                <Tag>GST registered</Tag>
+                {/* TODO: Add MSME certificate number once registered */}
+                <Tag>MSME certified</Tag>
               </div>
             </div>
           </div>

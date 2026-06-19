@@ -22,7 +22,7 @@ export default function Footer() {
           <span>·</span>
           <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
           <span>·</span>
-          <span>© 2025 Aquleo Technologies</span>
+          <span>© {new Date().getFullYear()} Aquleo Technologies</span>
         </div>
       </div>
     </footer>

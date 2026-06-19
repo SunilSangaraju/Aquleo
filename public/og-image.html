@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1200px;
+      height: 630px;
+      background: #042C53;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      overflow: hidden;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+      padding: 60px;
+    }
+    .logo svg { width: 120px; height: 120px; }
+    .company-name {
+      font-size: 42px;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
+    .tagline {
+      font-size: 26px;
+      font-weight: 500;
+      font-style: italic;
+      color: #EF9F27;
+      margin-top: 4px;
+    }
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: #378ADD;
+      margin: 4px 0;
+    }
+    .url {
+      position: absolute;
+      bottom: 36px;
+      right: 52px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #B5D4F4;
+      letter-spacing: 1px;
+    }
+    .location {
+      font-size: 13px;
+      font-weight: 500;
+      color: #85B7EB;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+        <polygon points="32,4 56,18 56,46 32,60 8,46 8,18" fill="#185FA5"/>
+        <path d="M32,14 C40,23 45,32 45,42 A13,13 0 1,1 19,42 C19,32 24,23 32,14 Z" fill="#E6F1FB"/>
+        <polygon points="34,22 26,36 32,36 28,50 38,36 33,36" fill="#EF9F27"/>
+      </svg>
+    </div>
+    <p class="company-name">Aquleo Technologies</p>
+    <div class="divider"></div>
+    <p class="tagline">Built in India. Built for the World.</p>
+    <p class="location">Andhra Pradesh, India · Est. 2025</p>
+  </div>
+  <p class="url">aquleo.in</p>
+</body>
+</html>
+<!--
+  TO CREATE og-image.png:
+  1. Open this file in Chrome
+  2. Set browser window to exactly 1200 x 630px
+  3. Screenshot the page (or use DevTools → capture screenshot)
+  4. Save as public/og-image.png
+-->

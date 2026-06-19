@@ -15,8 +15,35 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: 'Aquleo Technologies — Built in India. Built for the World.',
   description:
-    'Aquleo Technologies is a software company from Andhra Pradesh, India. We build products and IT services that work.',
+    'Software products and IT services from Andhra Pradesh, India. We build mobile apps, web platforms, and custom software.',
   keywords: ['software company', 'India', 'Andhra Pradesh', 'mobile apps', 'web development'],
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
+  openGraph: {
+    title: 'Aquleo Technologies',
+    description: 'Built in India. Built for the World.',
+    url: 'https://www.aquleo.in',
+    siteName: 'Aquleo Technologies',
+    images: [
+      {
+        url: 'https://www.aquleo.in/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Aquleo Technologies — Built in India. Built for the World.',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Aquleo Technologies',
+    description: 'Built in India. Built for the World.',
+    images: ['https://www.aquleo.in/og-image.png'],
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -5,7 +5,8 @@ import SectionLabel from '@/components/SectionLabel'
 
 export const metadata: Metadata = {
   title: 'Services — Aquleo Technologies',
-  description: 'Mobile apps, web platforms, custom software, and MVP development from Aquleo Technologies.',
+  description:
+    'Mobile app development, web platforms, custom business software, and MVP development services.',
 }
 
 const Tag = ({ children }: { children: string }) => (

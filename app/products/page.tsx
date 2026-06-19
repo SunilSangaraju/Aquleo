@@ -3,8 +3,9 @@ import type { Metadata } from 'next'
 import PhoneMockup from '@/components/PhoneMockup'
 
 export const metadata: Metadata = {
-  title: 'Products — Aquleo Technologies',
-  description: 'Lekka and PaisaaLens — software products built for real people.',
+  title: 'Our Products — Aquleo Technologies',
+  description:
+    'Lekka kirana ledger app and PaisaaLens personal finance app. Software built for real Indian users.',
 }
 
 const Tag = ({ children, variant = 'default' }: { children: string; variant?: 'default' | 'green' | 'blue' }) => {
@@ -63,7 +64,7 @@ export default function ProductsPage() {
               )}
             </div>
             <Link
-              href="/contact"
+              href="/contact?subject=Lekka+Waitlist"
               className="inline-flex items-center justify-center font-montserrat font-bold bg-gold-bright text-gold-dark px-6 py-2.5 rounded-md text-sm transition-opacity hover:opacity-90 w-fit mt-2"
             >
               Join waitlist
@@ -98,7 +99,7 @@ export default function ProductsPage() {
               )}
             </div>
             <Link
-              href="/contact"
+              href="/contact?subject=PaisaaLens+Early+Access"
               className="inline-flex items-center justify-center font-montserrat font-bold bg-gold-bright text-gold-dark px-6 py-2.5 rounded-md text-sm transition-opacity hover:opacity-90 w-fit mt-2"
             >
               Get early access

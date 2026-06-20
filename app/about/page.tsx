@@ -63,7 +63,7 @@ export default function AboutPage() {
                 Build software that matters
               </h2>
               <p className="font-montserrat text-gray-text text-sm leading-relaxed">
-                Aquleo Technologies was founded in 2025 with one goal: to build software that real
+                Aquleo Technologies was founded in 2026 with one goal: to build software that real
                 people actually use. We started with products for kirana store owners and personal
                 finance users in Andhra Pradesh — people who needed simple, reliable tools in their
                 own language.
@@ -82,7 +82,7 @@ export default function AboutPage() {
                 internationally, and work with clients remotely across time zones.
               </p>
               <div className="flex flex-wrap gap-1.5">
-                <Tag>Founded 2025</Tag>
+                <Tag>Founded 2026</Tag>
                 <Tag>Andhra Pradesh</Tag>
                 {/* TODO: Add GST number once registered */}
                 <Tag>GST registered</Tag>
@@ -112,7 +112,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center text-center gap-5">
           <Logo size="md" variant="white" showWordmark={false} />
           <p className="font-montserrat font-medium text-[10px] text-navy-lighter tracking-[2.5px] uppercase">
-            Andhra Pradesh, India · Est. 2025
+            Andhra Pradesh, India · Est. 2026
           </p>
           <p className="font-montserrat font-bold text-3xl md:text-4xl italic text-gold-bright max-w-xl leading-snug">
             &ldquo;Built in India. Built for the World.&rdquo;

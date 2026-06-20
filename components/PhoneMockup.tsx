@@ -67,7 +67,7 @@ function PaisaaLensScreen() {
           PAISAALENS
         </p>
         <p className="font-montserrat text-[10px] mt-0.5 text-navy-lighter">
-          June 2025 · All accounts
+          June 2026 · All accounts
         </p>
       </div>
       {/* Body */}

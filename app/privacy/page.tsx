@@ -40,6 +40,26 @@ export default function PrivacyPage() {
       <section className="bg-white py-14 md:py-20">
         <div className="max-w-[760px] mx-auto px-6 flex flex-col gap-10">
 
+          {/* Lekka app privacy policy link */}
+          <div style={{
+            background: '#DCF8C6',
+            border: '1px solid #25D366',
+            borderRadius: '12px',
+            padding: '16px 20px',
+          }}>
+            <p style={{ fontWeight: 600, color: '#075E54', marginBottom: '4px' }}>
+              Looking for the Lekka app privacy policy?
+            </p>
+            <p style={{ color: '#0F6E56' }}>
+              <a
+                href="/privacy/lekka.html"
+                style={{ color: '#075E54', fontWeight: 600 }}
+              >
+                View Lekka App Privacy Policy →
+              </a>
+            </p>
+          </div>
+
           <Section title="1. Introduction">
             <p>
               Aquleo Technologies (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) is

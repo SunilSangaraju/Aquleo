@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lekka — Privacy Policy</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f8f9fa;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+
+    /* ── Header ── */
+    .header {
+      background: #04342C;
+      padding: 32px 24px 28px;
+      text-align: center;
+    }
+    .header-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .header-icon {
+      width: 48px; height: 48px;
+      background: #5DCAA5;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+    }
+    .header h1 {
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .header h1 span { color: #5DCAA5; }
+    .header-sub {
+      color: #A0D9C8;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+    .header-date {
+      display: inline-block;
+      margin-top: 12px;
+      background: rgba(255,255,255,0.1);
+      color: #A0D9C8;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* ── Telugu Summary Banner ── */
+    .telugu-banner {
+      background: #E8F5E9;
+      border-left: 4px solid #5DCAA5;
+      margin: 24px auto;
+      max-width: 760px;
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+    }
+    .telugu-banner h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #04342C;
+      margin-bottom: 10px;
+    }
+    .telugu-banner p {
+      font-size: 14px;
+      color: #1a5c3e;
+      line-height: 1.8;
+    }
+    .telugu-banner .telugu-text {
+      font-size: 15px;
+      color: #04342C;
+      margin-top: 8px;
+      line-height: 2;
+    }
+
+    /* ── Main container ── */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+
+    /* ── App info card ── */
+    .app-info {
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .app-info-item {
+      flex: 1;
+      min-width: 120px;
+    }
+    .app-info-item label {
+      font-size: 10px;
+      font-weight: 700;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .app-info-item span {
+      font-size: 14px;
+      font-weight: 600;
+      color: #04342C;
+    }
+
+    /* ── Section ── */
+    .section {
+      background: #ffffff;
+      border: 1px solid #e8e8e8;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    .section-number {
+      display: inline-block;
+      background: #04342C;
+      color: #5DCAA5;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #04342C;
+      margin-bottom: 12px;
+    }
+    .section p {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 10px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+    .section ul {
+      list-style: none;
+      margin: 10px 0;
+    }
+    .section ul li {
+      font-size: 14px;
+      color: #444;
+      padding: 5px 0 5px 20px;
+      position: relative;
+    }
+    .section ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #5DCAA5;
+      font-weight: 700;
+    }
+
+    /* ── Highlight boxes ── */
+    .highlight-green {
+      background: #E8F5E9;
+      border: 1px solid #5DCAA5;
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin: 12px 0;
+      font-size: 14px;
+      color: #04342C;
+      font-weight: 500;
+    }
+    .highlight-blue {
+      background: #E3F2FD;
+      border: 1px solid #90CAF9;
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin: 12px 0;
+      font-size: 14px;
+      color: #0D47A1;
+    }
+
+    /* ── Permission table ── */
+    .perm-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    .perm-table th {
+      background: #04342C;
+      color: #A0D9C8;
+      font-size: 12px;
+      text-align: left;
+      padding: 8px 12px;
+      font-weight: 600;
+    }
+    .perm-table th:first-child { border-radius: 6px 0 0 0; }
+    .perm-table th:last-child { border-radius: 0 6px 0 0; }
+    .perm-table td {
+      font-size: 13px;
+      color: #444;
+      padding: 8px 12px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .perm-table tr:last-child td { border-bottom: none; }
+    .perm-table tr:nth-child(even) td { background: #fafafa; }
+    .perm-badge {
+      display: inline-block;
+      background: #E8F5E9;
+      color: #04342C;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: #04342C;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 8px;
+    }
+    .contact-card p { color: #A0D9C8; font-size: 14px; margin-bottom: 6px; }
+    .contact-card a { color: #5DCAA5; font-weight: 700; text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+    .contact-card .contact-name { color: #ffffff; font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+
+    /* ── Footer ── */
+    .footer {
+      background: #04342C;
+      text-align: center;
+      padding: 24px;
+      margin-top: 40px;
+    }
+    .footer p { color: #A0D9C8; font-size: 12px; line-height: 1.8; }
+    .footer a { color: #5DCAA5; text-decoration: none; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .header h1 { font-size: 22px; }
+      .section { padding: 18px 16px; }
+      .section h2 { font-size: 16px; }
+      .telugu-banner { margin: 16px 0; border-radius: 0; }
+      .container { padding: 0 16px 48px; }
+      .app-info { flex-direction: column; gap: 10px; }
+      .perm-table { font-size: 12px; }
+      .perm-table td, .perm-table th { padding: 6px 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-logo">
+      <div class="header-icon">📒</div>
+      <div>
+        <h1>Lekka <span>— లెక్క</span></h1>
+      </div>
+    </div>
+    <p class="header-sub">Privacy Policy · Aquleo Technologies</p>
+    <span class="header-date">Last updated: June 2026</span>
+  </div>
+
+  <div class="container">
+
+    <!-- Telugu Summary Banner -->
+    <div class="telugu-banner">
+      <h2>తెలుగు సారాంశం — Telugu Summary</h2>
+      <p class="telugu-text">
+        లెక్క యాప్ మీ వ్యాపార డేటాను (కస్టమర్ పేర్లు, అప్పులు, లావాదేవీలు) మీ ఫోన్ లోనే నిల్వ చేస్తుంది.<br/>
+        మీ డేటాను మేము ఎక్కడా పంపించము, అమ్మము, లేదా షేర్ చేయము.<br/>
+        ఆన్‌లైన్ కనెక్షన్ లేకుండా కూడా పని చేస్తుంది.<br/>
+        ఏదైనా సందేహం ఉంటే: <strong>hello@aquleo.in</strong> కి ఇమెయిల్ చేయండి.
+      </p>
+      <p style="margin-top:10px; font-size:13px; color:#1a5c3e;">
+        <em>Your data stays on your device. We do not access, store, or share it.</em>
+      </p>
+    </div>
+
+    <!-- App Info -->
+    <div class="app-info">
+      <div class="app-info-item">
+        <label>App Name</label>
+        <span>Lekka — లెక్క</span>
+      </div>
+      <div class="app-info-item">
+        <label>Developer</label>
+        <span>Aquleo Technologies</span>
+      </div>
+      <div class="app-info-item">
+        <label>Platform</label>
+        <span>Android</span>
+      </div>
+      <div class="app-info-item">
+        <label>Category</label>
+        <span>Business / Finance</span>
+      </div>
+      <div class="app-info-item">
+        <label>Contact</label>
+        <span>hello@aquleo.in</span>
+      </div>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section">
+      <span class="section-number">01</span>
+      <h2>Introduction</h2>
+      <p>
+        Aquleo Technologies ("we", "us", "our") built the Lekka app to help kirana shop owners and
+        small business owners manage their khata (ledger) simply and reliably. We are committed to
+        protecting your privacy.
+      </p>
+      <p>
+        This Privacy Policy explains what information the Lekka app collects, how it is used, where
+        it is stored, and your rights as a user. By using Lekka, you agree to the practices described
+        in this policy.
+      </p>
+      <div class="highlight-green">
+        Lekka is designed as an offline-first app. Your business data never leaves your device unless
+        you explicitly choose to share it (e.g., sending a WhatsApp message to a customer).
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section">
+      <span class="section-number">02</span>
+      <h2>Information the App Collects</h2>
+      <p>Lekka collects only the information you enter directly into the app:</p>
+      <ul>
+        <li>Customer names and phone numbers (that you add manually)</li>
+        <li>Transaction amounts — credit given and payments received</li>
+        <li>Transaction dates and notes you add</li>
+        <li>Voice recordings — temporarily processed to convert speech to text for entry (not stored)</li>
+        <li>Shop name or business name (optional, for display purposes)</li>
+      </ul>
+      <p>
+        <strong>We do not collect:</strong> your location, browsing history, device contacts
+        (without explicit permission), or any data unrelated to your ledger.
+      </p>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section">
+      <span class="section-number">03</span>
+      <h2>How We Use Your Information</h2>
+      <p>All data you enter into Lekka is used solely to operate the app for you:</p>
+      <ul>
+        <li>To display your customer list and outstanding balances</li>
+        <li>To record and show transaction history</li>
+        <li>To generate WhatsApp reminder messages (sent from your own device)</li>
+        <li>To provide voice-to-text entry using your microphone</li>
+        <li>To display your shop name in the app interface</li>
+      </ul>
+      <div class="highlight-blue">
+        We do <strong>not</strong> use your data for advertising, analytics, profiling, or any
+        purpose other than making the app work for you.
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section">
+      <span class="section-number">04</span>
+      <h2>Data Storage — Where Your Data Lives</h2>
+      <p>
+        All your ledger data — customer names, phone numbers, transaction records — is stored
+        <strong>locally on your Android device</strong> using the device's secure local database
+        (SQLite). It does not leave your phone.
+      </p>
+      <ul>
+        <li>No data is uploaded to any server or cloud</li>
+        <li>No account or sign-in is required to use Lekka</li>
+        <li>Data is accessible only through the Lekka app on your device</li>
+        <li>If you uninstall the app, all local data is deleted</li>
+        <li>We recommend backing up your device regularly to preserve your records</li>
+      </ul>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section">
+      <span class="section-number">05</span>
+      <h2>Android Permissions</h2>
+      <p>Lekka requests the following Android permissions and uses them only as described:</p>
+      <table class="perm-table">
+        <thead>
+          <tr>
+            <th>Permission</th>
+            <th>Why it's needed</th>
+            <th>Required?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>RECORD_AUDIO</strong></td>
+            <td>Voice entry — converts your spoken words to text for transaction entry. Audio is processed on-device or via Android's speech API and is not stored.</td>
+            <td><span class="perm-badge">Optional</span></td>
+          </tr>
+          <tr>
+            <td><strong>READ_CONTACTS</strong></td>
+            <td>Allows you to pick a customer's phone number from your contacts when adding a new customer. Only the selected contact's name and number are used.</td>
+            <td><span class="perm-badge">Optional</span></td>
+          </tr>
+          <tr>
+            <td><strong>INTERNET</strong></td>
+            <td>Used only if you tap "Send WhatsApp reminder" — opens WhatsApp with a pre-filled message. No data is sent to our servers.</td>
+            <td><span class="perm-badge">Optional</span></td>
+          </tr>
+          <tr>
+            <td><strong>VIBRATE</strong></td>
+            <td>Haptic feedback for button taps. No data access.</td>
+            <td><span class="perm-badge">Optional</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:12px;">
+        You can deny any optional permission and most app features will continue to work. Lekka
+        will never ask for permissions it does not need.
+      </p>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section">
+      <span class="section-number">06</span>
+      <h2>Voice Entry &amp; Microphone</h2>
+      <p>
+        Lekka includes a voice entry feature that lets you speak a transaction (e.g., "Raju 500
+        rupees credit") instead of typing it. When you use this feature:
+      </p>
+      <ul>
+        <li>Your voice is captured by the microphone only while you hold the voice button</li>
+        <li>Speech is converted to text using Android's built-in speech recognition service</li>
+        <li>The audio recording is not saved by Lekka</li>
+        <li>We do not receive, store, or process your voice data</li>
+      </ul>
+      <p>
+        Android's speech recognition may send audio to Google's servers as part of its standard
+        operation. This is governed by Google's own privacy policy, not ours.
+      </p>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section">
+      <span class="section-number">07</span>
+      <h2>WhatsApp Integration</h2>
+      <p>
+        Lekka lets you send payment reminders to customers via WhatsApp. When you tap "Send
+        WhatsApp reminder":
+      </p>
+      <ul>
+        <li>Lekka opens WhatsApp on your device with a pre-written message</li>
+        <li>The message is sent by you, from your WhatsApp account</li>
+        <li>Lekka does not have access to your WhatsApp messages or account</li>
+        <li>No data is transmitted to Aquleo Technologies through this process</li>
+      </ul>
+      <p>
+        WhatsApp usage is governed by Meta's privacy policy. We have no control over or
+        responsibility for WhatsApp's data practices.
+      </p>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="section">
+      <span class="section-number">08</span>
+      <h2>Third-Party Services</h2>
+      <p>
+        Lekka itself does not integrate with advertising networks, analytics SDKs, or data brokers.
+        The app operates entirely on your device.
+      </p>
+      <p>The following third-party services may be involved indirectly:</p>
+      <ul>
+        <li>
+          <strong>Google Play Services</strong> — for app distribution and updates. Governed by
+          Google's Privacy Policy.
+        </li>
+        <li>
+          <strong>Android Speech Recognition (Google)</strong> — used only when you activate voice
+          entry. Governed by Google's Privacy Policy.
+        </li>
+        <li>
+          <strong>WhatsApp (Meta)</strong> — only if you use the WhatsApp reminder feature.
+          Governed by Meta's Privacy Policy.
+        </li>
+      </ul>
+      <p>
+        We encourage you to review the privacy policies of these third parties if you have concerns
+        about their data practices.
+      </p>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="section">
+      <span class="section-number">09</span>
+      <h2>Data Sharing</h2>
+      <p>
+        We do not sell, rent, trade, or share your data with anyone — ever.
+      </p>
+      <ul>
+        <li>No advertising partners</li>
+        <li>No analytics companies</li>
+        <li>No data brokers</li>
+        <li>No government or law enforcement (unless legally compelled, which would be impossible
+          since we don't hold your data)</li>
+      </ul>
+      <div class="highlight-green">
+        Since all your data is stored only on your device, we have nothing to share even if we
+        wanted to.
+      </div>
+    </div>
+
+    <!-- Section 10 -->
+    <div class="section">
+      <span class="section-number">10</span>
+      <h2>Children's Privacy</h2>
+      <p>
+        Lekka is designed for adult business owners (18 years and older). We do not knowingly
+        collect personal information from children under 13. If you believe a child under 13 has
+        used the app and provided personal information, please contact us at hello@aquleo.in and
+        we will take appropriate steps.
+      </p>
+    </div>
+
+    <!-- Section 11 -->
+    <div class="section">
+      <span class="section-number">11</span>
+      <h2>Your Rights &amp; Data Deletion</h2>
+      <p>
+        Since all your data is stored locally on your device, you have full control over it at
+        all times:
+      </p>
+      <ul>
+        <li><strong>View your data</strong> — all data is visible within the app</li>
+        <li><strong>Edit your data</strong> — you can edit any customer or transaction record</li>
+        <li><strong>Delete your data</strong> — delete individual records within the app, or
+          uninstall the app to remove all data</li>
+        <li><strong>Export your data</strong> — use the app's export feature (if available) to
+          save a copy</li>
+      </ul>
+      <p>
+        If you have questions about data we may hold (e.g., from a support email you sent us),
+        contact us at hello@aquleo.in.
+      </p>
+    </div>
+
+    <!-- Section 12 -->
+    <div class="section">
+      <span class="section-number">12</span>
+      <h2>Updates to This Policy</h2>
+      <p>
+        We may update this Privacy Policy when the app adds new features or when legal requirements
+        change. When we do:
+      </p>
+      <ul>
+        <li>The updated date at the top of this page will change</li>
+        <li>Significant changes will be communicated through an in-app notice</li>
+        <li>Continued use of the app after updates means you accept the revised policy</li>
+      </ul>
+      <p>
+        The latest version of this policy is always available at:
+        <strong>https://aquleo.in/privacy/lekka.html</strong>
+      </p>
+    </div>
+
+    <!-- Contact -->
+    <div class="section">
+      <span class="section-number">13</span>
+      <h2>Contact Us</h2>
+      <p>If you have any questions, concerns, or requests about this Privacy Policy or the Lekka app:</p>
+      <div class="contact-card">
+        <p class="contact-name">Aquleo Technologies</p>
+        <p>Email: <a href="mailto:hello@aquleo.in">hello@aquleo.in</a></p>
+        <p>Website: <a href="https://aquleo.in" target="_blank">aquleo.in</a></p>
+        <p>Location: Andhra Pradesh, India</p>
+        <p style="margin-top:12px; font-size:13px;">
+          We will respond to all privacy-related enquiries within 48 hours.
+        </p>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>
+      <strong style="color:#ffffff;">Lekka — లెక్క</strong> &nbsp;·&nbsp;
+      Privacy Policy &nbsp;·&nbsp; Last updated June 2026<br/>
+      &copy; 2026 <a href="https://aquleo.in">Aquleo Technologies</a>, Andhra Pradesh, India<br/>
+      <a href="https://aquleo.in/privacy">Website Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="https://aquleo.in/terms">Terms of Service</a>
+    </p>
+  </div>
+
+</body>
+</html>

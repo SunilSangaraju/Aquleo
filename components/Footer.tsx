@@ -17,18 +17,21 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center md:justify-end gap-4 font-montserrat text-xs text-gray-muted">
-          <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
-          <span>·</span>
-          <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
-          <span>·</span>
-          <span>© {new Date().getFullYear()} Aquleo Technologies</span>
-          <span>·</span>
-          <span>Monika Dommaraju</span>
-          <span>·</span>
-          <span>Founder, Aquleo Technologies</span>
-          <span>·</span>
-          <a href="mailto:hello@aquleo.in" className="hover:text-white transition-colors">hello@aquleo.in</a>
+        <div className="flex flex-col items-center md:items-end gap-1.5 font-montserrat text-xs text-gray-muted">
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
+            <span>·</span>
+            <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
+            <span>·</span>
+            <span>© {new Date().getFullYear()} Aquleo Technologies</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <span>Monika Dommaraju</span>
+            <span>·</span>
+            <span>Founder, Aquleo Technologies</span>
+            <span>·</span>
+            <a href="mailto:hello@aquleo.in" className="hover:text-white transition-colors">hello@aquleo.in</a>
+          </div>
         </div>
       </div>
     </footer>

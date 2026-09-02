@@ -1,7 +1,7 @@
 const stats = [
   {
-    value: '2',
-    label: 'Products in development',
+    value: '1',
+    label: 'Product live on Play Store',
     highlight: false,
   },
   {

@@ -103,8 +103,20 @@ export default function HomePage() {
                 manage customers — in Telugu and English, with voice entry support.
               </p>
               <div className="flex flex-wrap gap-1.5">
-                {productTags(['Telugu + English', 'Voice entry', 'Android', 'Launching soon'])}
+                {productTags(['Telugu + English', 'Voice entry', 'Android'])}
+                <span className="inline-block text-[10px] font-montserrat font-medium rounded-full px-2.5 py-0.5 bg-green-100 text-green-700">
+                  Live on Play Store
+                </span>
               </div>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.aquleo.lekka"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-montserrat text-xs font-medium mt-2 inline-block hover:underline"
+                style={{ color: '#EF9F27' }}
+              >
+                Download on Play Store →
+              </a>
             </div>
 
             <div
